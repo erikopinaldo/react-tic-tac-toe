@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 function Square({ value }) {
   function handleClick() {
     console.log('clicked!');
