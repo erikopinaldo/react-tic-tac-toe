@@ -26,20 +26,20 @@ export default function Board() {
 
     setSquares(nextSquares);
     setXIsNext(!xIsNext);
+  }
 
-    const winner = calculateWinner(squares);
-    let status;
+  const winner = calculateWinner(squares);
+  let status;
 
-    if (winner) {
-      status = `Winner: ${winner}`;
-    }
-    else {
-      status = `Next player: ${(xIsNext ? 'X' : 'O')}`;
-    }
+  if (winner) {
+    status = `Winner: ${winner}`;
+  }
+  else {
+    status = `Next player: ${(xIsNext ? 'X' : 'O')}`;
   }
 
   return (
-    <div>
+    <>
       <div className="status">{status}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
@@ -56,7 +56,7 @@ export default function Board() {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
-    </div>
+    </>
   )
 }
 
