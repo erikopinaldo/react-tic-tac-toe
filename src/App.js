@@ -8,7 +8,7 @@ function Square({ value, onSquareClick }) {
   );
 }
 
-function Board() {
+function Board({ xIsNext, squares, onPlay }) {
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   function handleClick(i) {
