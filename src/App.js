@@ -11,9 +11,9 @@ function Square({ value, onSquareClick }) {
 function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
     if (squares[i] || calculateWinner(squares)) return;
+    
     const nextSquares = squares.slice();
     
-
     if (xIsNext) {
       nextSquares[i] = 'X';
     }
